@@ -12,7 +12,7 @@
 
 
 <link   type="text/css"    href="../resources/css/bootstrap.min.css" rel="stylesheet">
-<link   type="text/css"    href="../resources/css/custom.css" rel="stylesheet"  />
+<link   type="text/css"    href="../resources/css/index.css" rel="stylesheet"  />
 <link   type="text/css"    href="../resources/css/font-awesome.css"  rel="stylesheet" >
 
 <!--

@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta http-equiv="Content-Language" content="zh-CN">
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+	<link href="resources/css/index.css" rel="stylesheet">
+
+	<script src="resources/js/jquery.min.js"></script>
+	<script src="resources/js/jquery.event.ue.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/jquery.udraggable.js"></script>
+	<script src="resources/js/resizeThis.js"></script>
+
+</head>
+<body>
+
+
+
+
+ <div id="tt" class="myBookMark" >
+
+ </div>
+<script>
+	setInterval("autoSave()",10000);
+
+	$('.myBookMark').udraggable({});
+	$('.myBookMark').resizeThis({
+		minSize: -100,
+		//noNative:true
+	});
+//
+//	$('.myBookMark').dblclick(function(){
+//		this.contentEditable=true;
+//		$('.myBookMark').udraggable('destroy');
+//		console.log(this);
+//	});
+	$('.myBookMark').on('dblclick',function(obj){
+		this.contentEditable=true;
+		$('.myBookMark').udraggable('destroy');
+		console.log(this);
+	});
+	function autoSave(){
+		var list = new Array();
+
+
+		$(".myBookMark").each(function(i, value) {
+			var pp=new Object();
+			pp.left=$(this).css("left");
+			pp.top=$(this).css("top");
+			pp.width=$(this).css("width");
+			pp.height=$(this).css("height");
+			pp.html=$(this).html();
+			list[i]=pp;
+
+		});
+		localStorage.allpp=JSON.stringify(list);
+		console.log("autoSave");
+	}
+
+	var list = JSON.parse(  localStorage.allpp);
+	$(".myBookMark").each(function(i, value) {
+		$(this).css("left", list[i].left);
+		$(this).css("top", list[i].top);
+		$(this).css("width", list[i].width);
+		$(this).css("height", list[i].height);
+		$(this).html(list[i].html);
+	});
+
+</script>
+</body>
+</html>

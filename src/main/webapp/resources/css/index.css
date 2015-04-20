@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+
+
+.myBookMark{
+	//我的书签;
+	min-width:90px;
+	height: 90px;
+	background: #ccc;
+
+
+}
