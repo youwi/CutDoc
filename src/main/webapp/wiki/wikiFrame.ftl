@@ -30,7 +30,7 @@
 	</div>
 	<div class='col-md-6 myPathT '  >
 		<ol class="breadcrumb myPath">
-		  <li><a href="../index.html"  id="gotoMain"  class='icon-home'>主页</a></li>
+		  <li><a href="../2.html"  id="gotoMain"  class='icon-home'>主页</a></li>
 		  <li><a href="/cutwiki/wiki"  id="gotoDeploy"  class="1active" >wiki</a></li>
 
 		</ol>

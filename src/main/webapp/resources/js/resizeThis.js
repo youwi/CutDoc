@@ -89,8 +89,8 @@
         if ( this._isNative ) {
             this.$el.css({
                 "resize": "both",
-                "min-width": this.options.minSize + "px",
-                "min-height": this.options.minSize + "px",
+             //   "min-width": this.options.minSize + "px",
+             //   "min-height": this.options.minSize + "px",
                 "max-width": this.options.maxSize + "px",
                 "max-height": this.options.maxSize + "px",
                 "overflow": "hidden"
